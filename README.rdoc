@@ -6,21 +6,21 @@
 
 This is done via Bundler, so from the application root:
 
-```$> bundle install```
+* `$> bundle install`
 
 Now create the databases:
 
-```$> bundle exec rake db:create:all```
+* `$> bundle exec rake db:create:all`
 
 Next, load the schema:
 
-```$> bundle exec rake db:schema:load```
+* `$> bundle exec rake db:schema:load`
 
 ## Local Server
 
 To run the app locally, use the built-in Rails webserver. This can be started via
 the following command:
 
-```$> bundle exec rails server```
+* `$> bundle exec rails server`
 
-Then point your browser to: ```http://localhost:3000```
+Then point your browser to: `http://localhost:3000`
