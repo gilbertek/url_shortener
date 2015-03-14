@@ -1,9 +1,13 @@
 class UrlsController < ApplicationController
-  before_action :set_url, only: [:show]
 
   # GET /urls/new
   def new
     @url = Url.new
+  end
+
+  def show
+    @url = Url.find_by(short_link: params[:id])
+    redirect_to @url.link
   end
 
 
@@ -26,7 +30,7 @@ class UrlsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_url
-      @url = Url.find(params[:id])
+      @url = Url.find_by(short_link: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
